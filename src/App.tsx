@@ -5,7 +5,7 @@ import ARPage from "./pages/ARPage";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/vr_test">
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
