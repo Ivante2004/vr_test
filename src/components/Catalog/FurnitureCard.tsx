@@ -6,10 +6,12 @@ interface Props {
 }
 
 export function FurnitureCard({ item }: Props) {
+  const defaultVariant = item.variants[0];
+
   return (
     <article className="card">
       <div className="card-image-wrap">
-        <img src={item.image} alt={item.name} className="card-image" />
+        <img src={defaultVariant.previewImage} alt={item.name} className="card-image" />
         <span className="card-badge">{item.category}</span>
       </div>
       <div className="card-content">
