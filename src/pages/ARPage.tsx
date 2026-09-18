@@ -8,12 +8,10 @@ export default function ARPage() {
   const { id } = useParams();
   const item = furnitureData.find((f) => f.id === id);
 
-  // Выбранный артикул (цвет)
   const [selectedVariant, setSelectedVariant] = useState(
     item ? item.variants[0] : null
   );
 
-  // Режим управления жестами
   const [useHandControl, setUseHandControl] = useState(false);
 
   if (!item || !selectedVariant) {
@@ -30,20 +28,13 @@ export default function ARPage() {
       <Link to="/" style={{ color: "#2563eb", textDecoration: "none", fontWeight: 600 }}>
         ← Назад в каталог
       </Link>
-      
+
       <h1 style={{ margin: "16px 0 12px" }}>{item.name}</h1>
 
-<<<<<<< HEAD
       {/* Блок выбора артикулов (Цветов) */}
       <div className="color-selector" style={{ marginBottom: 20 }}>
         <p style={{ fontSize: 15, color: "#4b5563", marginBottom: 8 }}>
           Цвет: <span style={{ fontWeight: 600, color: "#111827" }}>{selectedVariant.colorName}</span>
-=======
-      {/* Селектор артикулов */}
-      <div className="color-selector">
-        <p className="color-title">
-          Цвет: <span>{selectedVariant.colorName}</span>
->>>>>>> beead52 (Fix mediapipe base url for gh-pages)
         </p>
         <div style={{ display: "flex", gap: 10 }}>
           {item.variants.map((variant) => (
@@ -88,7 +79,6 @@ export default function ARPage() {
         </button>
       </div>
 
-      {/* Отображение плеера в зависимости от режима */}
       {useHandControl ? (
         <HandARViewer modelPath={selectedVariant.model} />
       ) : (
