@@ -1,0 +1,79 @@
+.ar-wrapper {
+  width: 100%;
+  height: 70vh;
+  background: radial-gradient(circle at center, #ffffff 0%, #eef2f7 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.ar-wrapper model-viewer {
+  width: 100%;
+  height: 100%;
+}
+
+.ar-launch-button {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  white-space: nowrap;
+}
+.color-selector {
+  margin-bottom: 20px;
+}
+
+.color-title {
+  font-size: 15px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.color-title span {
+  font-weight: 600;
+  color: #111827;
+}
+
+.color-list {
+  display: flex;
+  gap: 10px;
+}
+
+.color-btn {
+  width: 56px;
+  height: 64px;
+  padding: 4px;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.color-btn:hover {
+  border-color: #9ca3af;
+}
+
+.color-btn.active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
